@@ -8,4 +8,5 @@ This MOD improves browsing by remembering your last position in the registry tre
 - Thank you devnoname120 and some1psv for Registry Editor
 - TheFlow for Vitashell
 - Team Molecule and Yifan lu for their fantastic work
+- Gamesandconsoles.org
 
