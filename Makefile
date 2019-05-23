@@ -18,7 +18,7 @@ all: $(TARGET).vpk
 	vita-mksfoex -s TITLE_ID=$(TITLE_ID) "$(TARGET)" param.sfo
 	vita-pack-vpk -s param.sfo -b eboot.bin --add pkg/sce_sys/icon0.png=sce_sys/icon0.png --add pkg/sce_sys/livearea/contents/bg.png=sce_sys/livearea/contents/bg.png \
 		--add pkg/sce_sys/livearea/contents/startup.png=sce_sys/livearea/contents/startup.png \
-		--add pkg/sce_sys/livearea/contents/template.xml=sce_sys/livearea/contents/template.xml \ $@
+		--add pkg/sce_sys/livearea/contents/template.xml=sce_sys/livearea/contents/template.xml $@
 
 eboot.bin: $(TARGET).velf
 	vita-make-fself $< $@
