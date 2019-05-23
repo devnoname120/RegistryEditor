@@ -7,6 +7,7 @@
 #include <psp2/kernel/processmgr.h>
 #include <psp2/ime_dialog.h>
 #include <psp2/types.h>
+#include <psp2/registrymgr.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,20 +18,21 @@
 
 #include <vita2d.h>
 
-#define KEY_TYPE_INT 1
-#define KEY_TYPE_STR 2
-#define KEY_TYPE_BIN 3
-#define SIZE 685
+enum {
+	KEY_TYPE_INT=0,
+	KEY_TYPE_STR=1,
+	KEY_TYPE_BIN=2,
+};
 
 // Font
-#define FONT_SIZE 1.0f
-#define FONT_X_SPACE 15.0f
-#define FONT_Y_SPACE 23.0f
+#define FONT_SIZE 1
+#define FONT_X_SPACE 15
+#define FONT_Y_SPACE 23
 
 // Scroll bar
-#define SCROLL_BAR_X 0.0f
-#define SCROLL_BAR_WIDTH 8.0f
-#define SCROLL_BAR_MIN_HEIGHT 4.0f
+#define SCROLL_BAR_X 0
+#define SCROLL_BAR_WIDTH 8
+#define SCROLL_BAR_MIN_HEIGHT 4
 
 #define MAX_POSITION 16
 #define MAX_ENTRIES 16
@@ -42,12 +44,6 @@
 #define ANALOG_CENTER 128
 #define ANALOG_THRESHOLD 64
 #define ANALOG_SENSITIVITY 16
-
-int sceRegMgrGetKeyInt(const char*, const char*, int*);
-int sceRegMgrGetKeyStr(const char*, const char*, const char*, unsigned short size);
-int sceRegMgrGetKeyBin(const char*, const char*, const char*, unsigned short size);
-int sceRegMgrSetKeyInt(const char*, const char*, int);
-int sceRegMgrSetKeyStr(const char*, const char*, const char*, unsigned short size);
 
 enum Colors 
 {
@@ -89,8 +85,10 @@ enum
 
 typedef struct RegistryKey
 {
+	char *keyPath;
 	char *keyName;
 	int keyType;
+	int keySize;
 } RegistryKey;
 
 typedef struct RegistryDirectory
