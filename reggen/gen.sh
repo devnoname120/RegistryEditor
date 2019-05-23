@@ -1,0 +1,1 @@
+python3 b.py | sort > regs.c
