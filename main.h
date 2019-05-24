@@ -27,14 +27,14 @@ enum {
 };
 
 // Font
-#define FONT_SIZE 1
-#define FONT_X_SPACE 15
-#define FONT_Y_SPACE 23
+#define FONT_SIZE 1.0f
+#define FONT_X_SPACE 15.0f
+#define FONT_Y_SPACE 23.0f
 
 // Scroll bar
-#define SCROLL_BAR_X 0
-#define SCROLL_BAR_WIDTH 8
-#define SCROLL_BAR_MIN_HEIGHT 4
+#define SCROLL_BAR_X 0.0f
+#define SCROLL_BAR_WIDTH 8.0f
+#define SCROLL_BAR_MIN_HEIGHT 4.0f
 
 #define MAX_POSITION 16
 #define MAX_ENTRIES 16
