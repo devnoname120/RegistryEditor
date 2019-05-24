@@ -18,6 +18,8 @@
 
 #include <vita2d.h>
 
+#include "regs.h"
+
 enum {
 	KEY_TYPE_INT=0,
 	KEY_TYPE_STR=1,
@@ -82,14 +84,6 @@ enum
 	SCE_CTRL_LEFT_ANALOG_DOWN	= 0x0800000,
 	SCE_CTRL_LEFT_ANALOG_LEFT	= 0x1000000,
 };
-
-typedef struct RegistryKey
-{
-	char *keyPath;
-	char *keyName;
-	int keyType;
-	int keySize;
-} RegistryKey;
 
 typedef struct RegistryDirectory
 {

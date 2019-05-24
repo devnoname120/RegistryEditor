@@ -15,11 +15,6 @@ int topList[10] = {0};
 int curPosList[10] = {0};
 int posInd = 0;
 
-RegistryKey regData[] =
-{
-#include "regs.c"
-};
-#define REGDATA_SIZE (sizeof(regData)/sizeof(regData[0]))
 
 void initSceAppUtil()
 {

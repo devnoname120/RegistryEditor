@@ -1,6 +1,6 @@
 TITLE_ID = REGEDIT01
 TARGET   = RegistryEditor
-OBJS     = main.o ime_dialog.o
+OBJS     = main.o ime_dialog.o regs.o
 
 LIBS = -lvita2d -lSceDisplay_stub -lSceGxm_stub \
 	-lSceSysmodule_stub -lSceCtrl_stub -lScePgf_stub \
